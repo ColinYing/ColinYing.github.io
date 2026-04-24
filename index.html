@@ -138,17 +138,6 @@
     filter: saturate(0.92);
   }
 
-  .hero-photo-caption {
-    font-family: var(--display);
-    font-style: italic;
-    font-size: 12px;
-    line-height: 1.4;
-    color: var(--ink-muted);
-    text-align: right;
-    margin-top: 10px;
-    letter-spacing: 0.01em;
-  }
-
   .hero-eyebrow {
     font-family: var(--body);
     font-size: 12px;
@@ -359,24 +348,6 @@
     font-style: italic;
   }
 
-  .paper-status {
-    display: inline-block;
-    font-size: 11px;
-    font-style: normal;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    margin-right: 8px;
-    background: var(--highlight);
-    color: var(--accent);
-    border-radius: 3px;
-    vertical-align: 1px;
-  }
-  .paper-status.jmp {
-    background: var(--accent);
-    color: var(--paper);
-  }
-
   .paper-abstract {
     font-size: 15px;
     line-height: 1.65;
@@ -397,6 +368,28 @@
     font-style: italic;
     color: var(--ink-soft);
     margin-right: 6px;
+  }
+
+  .paper-release {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    padding: 12px 16px;
+    background: var(--highlight);
+    border-left: 2px solid var(--accent);
+    border-radius: 2px;
+  }
+  .paper-release .label {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 500;
+  }
+  .paper-release strong {
+    font-weight: 600;
+    color: var(--ink);
   }
 
   .paper-actions {
@@ -462,6 +455,10 @@
     margin-bottom: 20px;
     max-width: 600px;
   }
+  .data-desc strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
 
   .data-specs {
     display: grid;
@@ -495,11 +492,6 @@
   }
 
   /* ───────── Teaching ───────── */
-  .teaching-group {
-    margin-bottom: 18px;
-  }
-  .teaching-group:last-child { margin-bottom: 0; }
-
   .teaching-group-label {
     font-family: var(--body);
     font-size: 11px;
@@ -577,7 +569,6 @@
       max-width: 136px;
       padding-top: 0;
     }
-    .hero-photo-caption { text-align: left; }
     .hero-name { font-size: 52px; }
     .hero-role { font-size: 19px; }
     section.content { padding: 56px 0; }
@@ -620,12 +611,9 @@
         </p>
 
         <p class="hero-bio">
-          I study empirical asset pricing at the intersection of machine learning, large
-          language models, and textual data. My current work uses these tools to revisit
-          factor identification in the Chinese stock market, to understand how
-          anonymization of financial texts interacts with information extraction by LLMs,
-          and to build a data-driven industry classification system for Chinese A-share
-          firms.
+          Welcome! I am a PhD candidate at the School of Finance, Renmin University of
+          China. My research interests lie in empirical asset pricing, machine learning,
+          large language models, and text as data.
         </p>
 
         <div class="hero-links">
@@ -694,41 +682,6 @@
       <div class="paper-num">01</div>
       <div>
         <h3 class="paper-title">
-          <a href="#">Revisiting Factor Identification in the Chinese Stock Market: A Nonlinear Machine Learning Approach</a>
-        </h3>
-        <div class="paper-meta">with Zhuo Wang and Ke Wu · 2026</div>
-        <p class="paper-abstract">
-          We provide the first comprehensive nonlinear identification of priced factors
-          in the Chinese stock market by integrating Automatic Debiased Machine Learning
-          (ADML) with a nonlinear stochastic discount factor framework. Using a set of
-          132 candidate factors, we identify 42 with significant marginal contributions
-          to expected returns: behavioral and sentiment-related factors exhibit strong
-          explanatory power, whereas momentum factors perform weakly. The ADML-identified
-          factor model delivers lower pricing errors and stronger spanning performance
-          than linear double-selection LASSO and widely used benchmark models. We further
-          show that the factor structure changes markedly around the Split-Share Structure
-          Reform and differs systematically by state ownership — providing new evidence
-          that institutional change and ownership heterogeneity jointly shape the factor
-          structure in China's equity market.
-        </p>
-        <div class="paper-presentations">
-          <span class="label">Presentations:</span>
-          2026 China International Conference in Finance (CICF);
-          2026 CES China Annual Conference;
-          5th Annual Hong Kong Conference on Fintech and AI in Finance.
-        </div>
-        <div class="paper-actions">
-          <a href="#">Draft</a>
-          <a href="#">SSRN</a>
-          <a href="#">Slides</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="paper">
-      <div class="paper-num">02</div>
-      <div>
-        <h3 class="paper-title">
           <a href="#">Anonymization and Information Loss</a>
         </h3>
         <div class="paper-meta">with Ke Wu, Baozhong Yang, and Dexin Zhou · 2026</div>
@@ -746,15 +699,22 @@
           loss is more severe than look-ahead bias itself — suggesting that the costs
           of anonymization can outweigh its benefits in many financial applications.
         </p>
+        <div class="paper-presentations">
+          <span class="label">Presentations:</span>
+          2026 China International Conference in Finance (CICF);
+          2026 CES China Annual Conference;
+          5th Annual Hong Kong Conference on Fintech and AI in Finance.
+        </div>
         <div class="paper-actions">
-          <a href="#">Draft</a>
-          <a href="#">SSRN</a>
+          <!-- <a href="#">Draft</a> -->
+          <!-- <a href="#">SSRN</a> -->
+          <!-- <a href="#">Slides</a> -->
         </div>
       </div>
     </article>
 
     <article class="paper">
-      <div class="paper-num">03</div>
+      <div class="paper-num">02</div>
       <div>
         <h3 class="paper-title">
           <a href="#">Construction of an Industry Classification Dataset for Chinese A-Share Listed Companies: A Large Language Model Approach</a>
@@ -773,19 +733,53 @@
           that survive adjustment by the Fama–French five-factor and Chinese four-factor
           models, providing asset-pricing evidence for the classification's validity.
         </p>
+        <div class="paper-release">
+          <span class="label">Data release:</span>
+          Co-released with Xinhua Finance as the <strong>RUC–Xinhua Industry Classification
+          Standard</strong>, available for download via the Xinhua Finance terminal.
+        </div>
         <div class="paper-actions">
-          <a href="#">Draft (Chinese)</a>
-          <a href="#data">Dataset</a>
+          <!-- <a href="#">Draft (Chinese)</a> -->
+          <!-- <a href="#data">Dataset</a> -->
+        </div>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-num">03</div>
+      <div>
+        <h3 class="paper-title">
+          <a href="#">Revisiting Factor Identification in the Chinese Stock Market: A Nonlinear Machine Learning Approach</a>
+        </h3>
+        <div class="paper-meta">with Zhuo Wang and Ke Wu · 2026</div>
+        <p class="paper-abstract">
+          We provide the first comprehensive nonlinear identification of priced factors
+          in the Chinese stock market by integrating Automatic Debiased Machine Learning
+          (ADML) with a nonlinear stochastic discount factor framework. Using a set of
+          132 candidate factors, we identify 42 with significant marginal contributions
+          to expected returns: behavioral and sentiment-related factors exhibit strong
+          explanatory power, whereas momentum factors perform weakly. The ADML-identified
+          factor model delivers lower pricing errors and stronger spanning performance
+          than linear double-selection LASSO and widely used benchmark models. We further
+          show that the factor structure changes markedly around the Split-Share Structure
+          Reform and differs systematically by state ownership — providing new evidence
+          that institutional change and ownership heterogeneity jointly shape the factor
+          structure in China's equity market.
+        </p>
+        <div class="paper-actions">
+          <!-- <a href="#">Draft</a> -->
+          <!-- <a href="#">SSRN</a> -->
+          <!-- <a href="#">Slides</a> -->
         </div>
       </div>
     </article>
   </section>
 
-  <!-- ══════════ DATA & SOFTWARE ══════════ -->
+  <!-- ══════════ DATA ══════════ -->
   <section class="content" id="data">
     <div class="section-head">
       <span class="section-num">iv.</span>
-      <h2 class="section-title">Data &amp; Software</h2>
+      <h2 class="section-title">Data</h2>
       <span class="section-rule"></span>
     </div>
 
@@ -798,7 +792,9 @@
         and clustering the resulting semantic vectors. The taxonomy is transparent,
         reproducible, and can be re-estimated each year — closing a gap in the Chinese
         literature, where existing classifications are either proprietary or slow to
-        incorporate new business forms. Accompanies the working paper above.
+        incorporate new business forms. Co-released with Xinhua Finance as the
+        <strong>RUC–Xinhua Industry Classification Standard</strong>, available on the
+        Xinhua Finance terminal. Accompanies the working paper above.
       </p>
       <div class="data-specs">
         <div>
@@ -819,9 +815,9 @@
         </div>
       </div>
       <div class="data-actions">
-        <a href="#">Download</a>
-        <a href="#">Documentation</a>
-        <a href="#">Construction code (GitHub)</a>
+        <!-- <a href="#">Xinhua Finance Terminal</a> -->
+        <!-- <a href="#">Documentation</a> -->
+        <!-- <a href="#">Construction code (GitHub)</a> -->
       </div>
     </div>
   </section>
@@ -841,7 +837,7 @@
         <div class="teaching-course">Equity Markets and Analysis</div>
         <div class="teaching-sub">Renmin–Queen's Dual Degree Program · MSc</div>
       </div>
-      <div class="teaching-year">2025 — 2026</div>
+      <div class="teaching-year">2025 · 2026</div>
     </div>
 
     <div class="teaching-item">
